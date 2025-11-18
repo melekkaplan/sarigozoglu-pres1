@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SARIGÖZOĞLU 1000T Pres</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .pres-info {
+            background: #e74c3c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        .nav-tabs {
+            display: flex;
+            background: #34495e;
+            padding: 0;
+        }
+        .tab {
+            flex: 1;
+            padding: 15px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .tab:hover {
+            background: #3498db;
+        }
+        .tab.active {
+            background: #e74c3c;
+            font-weight: bold;
+        }
+        .tab-content {
+            display: none;
+            padding: 30px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .document-container {
+            background: #f8f9fa;
+            border: 3px dashed #bdc3c7;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .pdf-viewer {
+            width: 100%;
+            height: 600px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            background: white;
+        }
+        .excel-info {
+            background: #e8f4fc;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .download-btn {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin: 15px 10px;
+            transition: background 0.3s ease;
+        }
+        .download-btn:hover {
+            background: #219652;
+        }
+        .download-btn.excel {
+            background: #e67e22;
+        }
+        .download-btn.excel:hover {
+            background: #d35400;
+        }
+        .info-box {
+            background: #fff8e6;
+            border: 2px solid #f39c12;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏭 SARIGÖZOĞLU 1000T</h1>
+            <p>Hidrolik Pres Teknik Dokümanları</p>
+        </div>
+        
+        <div class="pres-info">
+            1000 Ton Hidrolik Pres - HİDROMODE HIP Model
+        </div>
+        
+        <div class="nav-tabs">
+            <button class="tab active" onclick="openTab('hidrolik')">💧 Hidrolik Şema</button>
+            <button class="tab" onclick="openTab('cizimler')">📐 Teknik Çizimler</button>
+        </div>
+        
+        <!-- HİDROLİK ŞEMA TAB -->
+        <div id="hidrolik" class="tab-content active">
+            <h2>📋 Hidrolik Sistem Ana Şeması</h2>
+            
+            <div class="document-container">
+                <h3>HİDROMODE HIP Ana Şeması</h3>
+                <iframe class="pdf-viewer" src="hidromode-hip.pdf"></iframe>
+                
+                <br>
+                <a href="hidromode-hip.pdf" class="download-btn" download>
+                    📥 PDF'yi İndir
+                </a>
+            </div>
+            
+            <div class="info-box">
+                <h4>🔧 Hidrolik Sistem Bilgileri:</h4>
+                <ul>
+                    <li><strong>BT 1:</strong> 4-20 MA BASINÇ TRANSMİTTER</li>
+                    <li><strong>S1:</strong> YUKARI konum sensörü</li>
+                    <li><strong>S2:</strong> AŞAĞI konum sensörü</li>
+                    <li><strong>P-T:</strong> Basınç ve Sıcaklık sensörleri</li>
+                    <li><strong>SW ÜST L:</strong> Üst limit anahtarı</li>
+                    <li><strong>SW ALT L:</strong> Alt limit anahtarı</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- TEKNİK ÇİZİMLER TAB -->
+        <div id="cizimler" class="tab-content">
+            <h2>📐 Teknik Çizimler ve Tablolar</h2>
+            
+            <div class="excel-info">
+                <h3>🔩 MOSSO - PROFİNET CETVELİ</h3>
+                <p><strong>700 MM Pres için Elektrik ve Kontrol Tablosu</strong></p>
+                
+                <div style="background: white; padding: 20px; border-radius: 8px; margin: 20px 0; text-align: left;">
+                    <h4>📊 Excel İçeriği:</h4>
+                    <ul>
+                        <li><strong>BT 1:</strong> 4-20 MA BASINÇ TRANSMİTTER</li>
+                        <li><strong>S1 YUKARI / S2 AŞAĞI:</strong> Konum sensörleri</li>
+                        <li><strong>P-T:</strong> Basınç ve Sıcaklık ölçümü</li>
+                        <li><strong>SW ÜST L / SW ALT L:</strong> Limit anahtarları</li>
+                        <li><strong>0-10 VOLT DEPLASMAN AYAR:</strong> Pozisyon kontrolü</li>
+                        <li><strong>PROFİNET CETVEL 700 MM:</strong> Ağ bağlantı tablosu</li>
+                        <li><strong>POMPA ve MOTOR:</strong> Hidrolik ünite bileşenleri</li>
+                        <li><strong>TANK:</strong> Hidrolik yağ deposu</li>
+                        <li><strong>Kontrol Butonları:</strong> ÇİFT EL START, YUKARI, ACİL STOP</li>
+                    </ul>
+                </div>
+                
+                <a href="mosso.xlsx" class="download-btn excel" download>
+                    📊 Excel'i İndir
+                </a>
+            </div>
+            
+            <div class="info-box">
+                <h4>💡 Kullanım Kılavuzu:</h4>
+                <ul>
+                    <li>Excel dosyasını indirerek tüm teknik verilere ulaşabilirsiniz</li>
+                    <li>PROFİNET ağ yapılandırması için bu tabloyu kullanın</li>
+                    <li>Sensör ve kontrol noktalarının konumları belirtilmiştir</li>
+                    <li>Acili durumlar için ACİL STOP butonları tanımlanmıştır</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            // Tüm tab içeriklerini gizle
+            const tabContents = document.getElementsByClassName('tab-content');
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove('active');
+            }
+            
+            // Tüm tab butonlarını pasif yap
+            const tabs = document.getElementsByClassName('tab');
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+            
+            // Seçilen tab'ı aktif yap
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
